@@ -29,4 +29,4 @@ La aplicación Java se ejecuta dentro de un contenedor Docker basado en la image
 ```bash
 cd docker
 docker build -t tetris-java:1.0 .
-docker run --rm tetris-java:1.0
+docker run -it --rm tetris-java:1.0
