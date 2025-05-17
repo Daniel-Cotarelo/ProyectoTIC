@@ -19,7 +19,7 @@ Se eligió la versión de 64 bits compatible con VirtualBox.
 
 - Se configuró la VM para usar el archivo ISO descargado como medio de arranque, montándolo en el controlador IDE.
 
-- Se asignaron 2 núcleos de CPU y se habilitó PAE/NX para un mejor rendimiento.
+- Se asignó 1 núcleo de CPU y se habilitó PAE/NX para un mejor rendimiento.
 
 ---
 
