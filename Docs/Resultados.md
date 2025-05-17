@@ -10,16 +10,22 @@ Este documento presenta las mediciones y observaciones realizadas durante la eje
 
 ### Uso de recursos
 
-- **CPU máximo observado:** XX%  
-- **Memoria usada:** XX MiB (XX%)  
+- **CPU máximo observado:** 4.8% (proceso gnome-shell)
+- **Memoria usada:** 231 MiB (proceso java)
 
 ### Captura de pantalla
 
-![Uso de recursos en VM](./captura-vm.png)
+![Uso de recursos en VM](./capturas/captura1.png)  
+> Captura del monitor htop mostrando el consumo de CPU y memoria RAM mientras se ejecuta el juego Java en Ubuntu.  
+> Se observa el proceso java activo con uso moderado de recursos.
 
-### Observaciones
+---
 
-Describe brevemente qué viste durante la ejecución: estabilidad, consumo, tiempos, etc.
+### Resultado del juego
+
+![Resultado del juego en VM](./capturas/captura2.png)  
+> Ejecución del juego Tetris desde terminal en la máquina virtual Ubuntu.  
+> El juego se ejecuta correctamente solicitando entrada del usuario.
 
 ---
 
@@ -27,16 +33,22 @@ Describe brevemente qué viste durante la ejecución: estabilidad, consumo, tiem
 
 ### Uso de recursos
 
-- **CPU máximo observado:** XX%  
-- **Memoria usada:** XX MiB (XX%)  
+- **CPU máximo observado:** 0.10%
+- **Memoria usada:** 15.88 MiB (0.10%)
 
 ### Captura de pantalla
 
-![Uso de recursos en Docker](./captura-docker.png)
+![Uso de recursos en Docker](./capturas/captura3.png)  
+> Monitorización del contenedor Docker mediante el comando docker stats.  
+> Se aprecia un consumo muy bajo de CPU y memoria durante la ejecución del contenedor interactivo.
 
-### Observaciones
+---
 
-Describe diferencias o similitudes con la VM.
+### Resultado del juego (Docker)
+
+![Resultado del juego en Docker](./capturas/captura4.png)  
+> Ejecución del juego Tetris dentro del contenedor Docker.  
+> El tablero del juego se despliega correctamente y acepta entrada por teclado.
 
 ---
 
@@ -44,17 +56,19 @@ Describe diferencias o similitudes con la VM.
 
 | Entorno           | Tiempo de arranque (segundos) |
 |-------------------|-------------------------------|
-| Máquina Virtual    | XX                            |
-| Contenedor Docker | XX                            |
+| Máquina Virtual    | 30                            |
+| Contenedor Docker | 4                             |
 
 ---
 
 ## 5. Conclusión
 
-Redacta tu conclusión personal sobre qué entorno es más adecuado según tus resultados, ventajas, desventajas y recomendaciones.
+Docker resultó ser un entorno más ligero y eficiente para ejecutar el juego Java, consumiendo significativamente menos CPU y memoria que la máquina virtual. Aunque la VM proporciona un entorno completo y flexible para pruebas del sistema operativo, Docker ofrece ventajas claras en rendimiento, simplicidad y velocidad para aplicaciones concretas.
 
 ---
 
 ## 6. Referencias
 
-Incluye enlaces a tu repositorio y cualquier fuente consultada.
+- Repositorio del proyecto: [https://github.com/Daniel-Cotarelo/ProyectoTIC](https://github.com/Daniel-Cotarelo/ProyectoTIC)
+- Documentación de Docker: [https://docs.docker.com/](https://docs.docker.com/)
+- Sitio oficial de Ubuntu: [https://ubuntu.com/](https://ubuntu.com/)
