@@ -1,14 +1,14 @@
-# Usar una imagen base de Java con JDK
+# Imagen base
 FROM openjdk:17-slim
 
-# Establecer el directorio de trabajo en el contenedor
+# Crear carpeta de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copiar el archivo fuente Java al contenedor
-COPY scripts/Tetris.java .
+# Copiar el archivo desde el contexto local al contenedor
+COPY Tetris.java .
 
 # Compilar el archivo Java
 RUN javac Tetris.java
 
-# Comando por defecto para ejecutar el juego
+# Ejecutar el juego
 CMD ["java", "Tetris"]
